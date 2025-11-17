@@ -1,0 +1,15 @@
+mkdir   #crear carpeta del proyecto tienda_grapgql
+
+python -m venv .venv     #creo el entrono virtual
+
+.venv\Scripts\activate   #activo el entorno virtul
+
+pin install "Django>=5" "graphene>=3.0" #instalacion de framework backenddajango y graphene para graphql
+
+django-admin startproject projecttiendaAPI #creacion del proyecto django
+
+cd projecttiendaAPI      #Ingreso a la carpeta de del proyecto django
+
+python manage.py statapp apptiendaweb #creo la app para el servicio web
+
+python manage.py runserver #prabar instalaciones
