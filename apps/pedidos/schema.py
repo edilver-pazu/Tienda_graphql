@@ -14,7 +14,11 @@ class DetallePedidoType(DjangoObjectType):
 
 class Query(graphene.ObjectType):
     pedidos = graphene.List(PedidoType)
+    pedido = graphene.Field(PedidoType, id=graphene.ID())
 
     def resolve_pedidos(self, info):
         return Pedido.objects.all()
+    
+    def resolve_pedido(self, info, id):
+        return Pedido.objects.get(pk=id)
     

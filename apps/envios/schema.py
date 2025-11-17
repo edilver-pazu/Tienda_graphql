@@ -9,7 +9,11 @@ class EnvioType(DjangoObjectType):
 
 class Query(graphene.ObjectType):
     envios = graphene.List(EnvioType)
+    envio = graphene.Field(EnvioType, id=graphene.ID())
 
     def resolve_envios(self, info):
         return Envio.objects.all()
+    
+    def resolve_envio(self, info, id):
+        return Envio.objects.get(pk=id)
     
