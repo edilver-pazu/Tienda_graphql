@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'graphene_django',
-    'apptiendaweb',
+
+    #apps
+    'apps.clientes',
+    'apps.envios',
+    'apps.pagos',
+    'apps.pedidos',
+    'apps.productos',
 ]
 
 GRAPHENE = {
