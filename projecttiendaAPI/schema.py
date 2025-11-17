@@ -1,5 +1,5 @@
 import graphene
-from apps.productos.schema import Query as ProductosQuery
+from apps.productos.schema import Query as ProductosQuery, Mutation as ProductoMutation
 from apps.pedidos.schema import Query as PedidosQuery
 from apps.pagos.schema import Query as PagosQuery
 from apps.envios.schema import Query as EnviosQuery
@@ -15,4 +15,9 @@ class Query(
 ):
     pass
 
-schema = graphene.Schema(query=Query)
+class Mutation(
+    ProductoMutation
+):
+    pass
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
