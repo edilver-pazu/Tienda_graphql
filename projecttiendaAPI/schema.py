@@ -3,7 +3,7 @@ from apps.productos.schema import Query as ProductosQuery, Mutation as ProductoM
 from apps.pedidos.schema import Query as PedidosQuery, Mutation as PedidoMutation
 from apps.pagos.schema import Query as PagosQuery, Mutation as PagoMutation
 from apps.envios.schema import Query as EnviosQuery, Mutation as EnvioMutation
-from apps.clientes.schema import Query as ClientesQuery
+from apps.clientes.schema import Query as ClientesQuery, Mutation as ClienteMutation
 
 class Query(
     ProductosQuery,
@@ -20,6 +20,7 @@ class Mutation(
     PedidoMutation,
     PagoMutation,
     EnvioMutation,
+    ClienteMutation,
 ):
     pass
 
